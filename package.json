@@ -90,7 +90,7 @@
     "lib/"
   ],
   "scripts": {
-    start": "node examples/hello-world/index.js"
+    start": "node examples/hello-world/index.j"
   }
   "scripts": {
     "lint": "eslint .",
