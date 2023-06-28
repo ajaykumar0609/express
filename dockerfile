@@ -1,13 +1,18 @@
-FROM node:18-alpine
+# Use a Node.js base image
+FROM node:14-alpine
 
-npm install -g express-generator@4
+# Set the working directory
+WORKDIR /app
 
-express /tmp/foo && cd /tmp/fo
+# Clone the Express.js project from GitHub
+RUN  npm install -g express-generator@4
+RUN  express /tmp/foo && cd /tmp/foo
 
-WORKDIR . .
+# Install dependencies
+RUN npm install
 
-COPY ["package.json" ]
+# Expose the desired port (e.g., 3000)
+EXPOSE 3000
 
-COPY . .
-
-CMD [" npm start "]
+# Start the Express.js server
+CMD ["npm", "start"]
