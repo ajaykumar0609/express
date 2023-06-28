@@ -89,9 +89,11 @@
     "index.js",
     "lib/"
   ],
-  "scripts": {
-    start": "node examples/hello-world/index.j"
-  }
+  {
+    "scripts": {
+        "start": "node express/examples/hello-world/index.js"
+    }
+}
   "scripts": {
     "lint": "eslint .",
     "test": "mocha --require test/support/env --reporter spec --bail --check-leaks test/ test/acceptance/",
