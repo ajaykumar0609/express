@@ -6,7 +6,10 @@ WORKDIR /app
 
 # Clone the Express.js project from GitHub
 RUN  npm install -g express-generator@4
-RUN  express /tmp/foo && cd /tmp/foo
+RUN express /tmp/foo && cd /tmp/foo
+
+# Copy package.json to the working directory
+COPY package.json .
 
 # Install dependencies
 RUN npm install
