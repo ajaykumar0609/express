@@ -90,7 +90,9 @@
     "lib/"
   ],
   "scripts": {
-    start": "examples/hello-world/index.js"
+    start": "node examples/hello-world/index.js"
+  }
+  "scripts": {
     "lint": "eslint .",
     "test": "mocha --require test/support/env --reporter spec --bail --check-leaks test/ test/acceptance/",
     "test-ci": "nyc --reporter=lcovonly --reporter=text npm test",
