@@ -11,9 +11,6 @@ RUN express /tmp/foo && cd /tmp/foo
 # Copy package.json to the working directory
 COPY package.json .
 
-# Install dependencies
-RUN npm install
-
 # Expose the desired port (e.g., 3000)
 EXPOSE 3000
 
